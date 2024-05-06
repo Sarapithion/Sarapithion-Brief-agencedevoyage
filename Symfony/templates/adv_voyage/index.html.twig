@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AdvVoyage index{% endblock %}
+
+{% block body %}
+    <h1>AdvVoyage index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Durée</th>
+                <th>Date_départ</th>
+                <th>Date_fin</th>
+                <th>Url_image</th>
+                <th>Résumé</th>
+                <th>Nombre_pers_min</th>
+                <th>Nombre_pers_max</th>
+                <th>Prix</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for adv_voyage in adv_voyages %}
+            <tr>
+                <td>{{ adv_voyage.id }}</td>
+                <td>{{ adv_voyage.Durée }}</td>
+                <td>{{ adv_voyage.DateDépart ? adv_voyage.DateDépart|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ adv_voyage.DateFin ? adv_voyage.DateFin|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ adv_voyage.UrlImage }}</td>
+                <td>{{ adv_voyage.Résumé }}</td>
+                <td>{{ adv_voyage.NombrePersMin }}</td>
+                <td>{{ adv_voyage.NombrePersMax }}</td>
+                <td>{{ adv_voyage.Prix }}</td>
+                <td>
+                    <a href="{{ path('app_adv_voyage_show', {'id': adv_voyage.id}) }}">show</a>
+                    <a href="{{ path('app_adv_voyage_edit', {'id': adv_voyage.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="10">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_adv_voyage_new') }}">Create new</a>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New AdvUser{% endblock %}
+
+{% block body %}
+    <h1>Create new AdvUser</h1>
+
+    {{ include('adv_user/_form.html.twig') }}
+
+    <a href="{{ path('app_adv_user_index') }}">back to list</a>
+{% endblock %}
