@@ -23,13 +23,13 @@ class AdvReservation
     #[Groups(['api_reservation_index'])]
     private ?string $Message = null;
 
-    #[ORM\ManyToOne(inversedBy: 'advReservation')]
+    #[ORM\ManyToOne(inversedBy: 'AdvReservation')]
     private ?AdvVoyage $advVoyage = null;
 
-    #[ORM\ManyToOne(inversedBy: 'advReservation')]
+    #[ORM\ManyToOne(inversedBy: 'AdvReservation')]
     private ?AdvUser $advUser = null;
 
-    #[ORM\ManyToOne(inversedBy: 'advReservations')]
+    #[ORM\ManyToOne(inversedBy: 'AdvReservations')]
     private ?advStatut $advStatut = null;
 
     public function getId(): ?int

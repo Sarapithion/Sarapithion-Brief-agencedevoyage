@@ -6,7 +6,12 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {
+  theme: { 
+    colors:{
+      violet: "#cca9dd ",
+      vert : "#aaf0d1",
+      white: "#f5f5f5",
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

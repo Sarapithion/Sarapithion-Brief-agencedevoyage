@@ -2,9 +2,9 @@
 
 namespace App\Form;
 
+use App\Entity\AdvCategorie;
 use App\Entity\AdvPays;
 use App\Entity\AdvVoyage;
-use App\Entity\advCategorie;
 use App\Entity\advUser;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
@@ -34,7 +34,7 @@ class AdvVoyageType extends AbstractType
 'multiple' => true,
             ])
             ->add('advCategorie', EntityType::class, [
-                'class' => advCategorie::class,
+                'class' => AdvCategorie::class,
 'choice_label' => 'id',
 'multiple' => true,
             ])

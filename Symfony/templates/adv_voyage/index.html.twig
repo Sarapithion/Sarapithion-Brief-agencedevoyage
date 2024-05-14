@@ -3,30 +3,31 @@
 {% block title %}AdvVoyage index{% endblock %}
 
 {% block body %}
-    <h1>AdvVoyage index</h1>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Durée</th>
-                <th>Date_départ</th>
-                <th>Date_fin</th>
-                <th>Url_image</th>
-                <th>Résumé</th>
-                <th>Nombre_pers_min</th>
-                <th>Nombre_pers_max</th>
-                <th>Prix</th>
-                <th>actions</th>
-            </tr>
+
+    <h1>Liste des voyages réservés</h1>
+
+   <table class="table-fixed border-x border-b w-full">
+    <thead>
+        <tr>
+            <th class="border px-4 py-2">Id</th>
+            <th class="border px-4 py-2">Durée</th>
+            <th class="border px-4 py-2">Date_départ</th>
+            <th class="border px-4 py-2">Date_fin</th>
+            <th class="border px-4 py-2">Url_image</th>
+            <th class="border px-4 py-2">Résumé</th>
+            <th class="border px-4 py-2">Nombre_pers_min</th>
+            <th class="border px-4 py-2">Nombre_pers_max</th>
+            <th class="border px-4 py-2">Prix</th>
+            <th class="border px-4 py-2">actions</th>
         </thead>
         <tbody>
         {% for adv_voyage in adv_voyages %}
             <tr>
                 <td>{{ adv_voyage.id }}</td>
-                <td>{{ adv_voyage.Durée }}</td>
-                <td>{{ adv_voyage.DateDépart ? adv_voyage.DateDépart|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ adv_voyage.DateFin ? adv_voyage.DateFin|date('Y-m-d H:i:s') : '' }}</td>
+                <td class="example-wrapper">{{ adv_voyage.Durée }}</td>
+                <td>{{ adv_voyage.DateDépart ? adv_voyage.DateDépart|date('d-m-Y') : '' }}</td>
+                <td>{{ adv_voyage.DateFin ? adv_voyage.DateFin|date('d-m-Y') : '' }}</td>
                 <td>{{ adv_voyage.UrlImage }}</td>
                 <td>{{ adv_voyage.Résumé }}</td>
                 <td>{{ adv_voyage.NombrePersMin }}</td>
