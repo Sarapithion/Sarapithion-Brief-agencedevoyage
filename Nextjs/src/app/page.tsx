@@ -39,18 +39,26 @@ export default function Home() {
 
         {images.map((imageObj, index) => (
           <figure key={index} className={`h-96 ${currentIndex === index + 1? '' : 'hidden'}`}>
-            <img src={imageObj.url} alt="Image" className="absolute inset-0 z-10 h-full w-full object-cover object-firopacity-70" />
+            <img src={imageObj.url} alt="Image" className="absolute inset-0 z-10 h-full w-2/4 m-auto object-cover object-firopacity-70" />
             <figcaption className="absolute inset-x-0 bottom-1 z-20 w-96 mx-auto p-4 font-light text-sm text-center tracking-widest leading-snug bg-gray-300 bg-opacity-25">
               {imageObj.text}
             </figcaption>
           </figure>
         ))}
-
-        <button onClick={back} className="absolute left-14 top-1/2 -translate-y-1/2 w-11 h-11 flex justify-center items-center rounded-full shadow-md z-10 bg-gray-100 hover:bg-gray-200">
-          {/* SVG icon for back button */}
+        <button onClick={back} className="absolute left-14 top-1/2 -translate-y-1/2 w-11 h-11 flex justify-center items-center rounded-full shadow-md z-10 bg-white hover:bg-violet">
+       <svg className=" w-8 h-8 font-bold transition duration-500 ease-in-out transform motion-reduce:transform-none text-violet hover:text-white hover:-translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7">
+            </path>
+        </svg>
         </button>
 
-        <button onClick={next} className="absolute right-14 top-1/2 translate-y-1/2 w-11 h-11 flex justify-center items-center rounded-full shadow-md z-10 bg-gray-100 hover:bg-gray-200">
+        <button onClick={next} className="absolute right-14 top-1/2 translate-y-1/2 w-11 h-11 flex justify-center items-center rounded-full shadow-md z-10 bg-white hover:bg-violet">
+        
+        <svg className=" w-8 h-8 font-bold transition duration-500 ease-in-out transform motion-reduce:transform-none text-violet hover:text-white hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
+        </svg>
         </button>
       </article>
       <Footer/>
