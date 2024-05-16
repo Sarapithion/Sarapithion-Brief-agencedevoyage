@@ -16,15 +16,15 @@ class AdvVoyageType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('Durée')
-            ->add('Date_départ', null, [
+            ->add('Duree')
+            ->add('Date_depart', null, [
                 'widget' => 'single_text'
             ])
             ->add('Date_fin', null, [
                 'widget' => 'single_text'
             ])
             ->add('Url_image')
-            ->add('Résumé')
+            ->add('Resume')
             ->add('Nombre_pers_min')
             ->add('Nombre_pers_max')
             ->add('Prix')

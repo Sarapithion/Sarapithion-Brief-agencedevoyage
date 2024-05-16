@@ -17,10 +17,10 @@ class AdvVoyage
     private ?int $id = null;
 
     #[ORM\Column]
-    private ?int $Durée = null;
+    private ?int $Duree = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
-    private ?\DateTimeInterface $Date_départ = null;
+    private ?\DateTimeInterface $Date_depart = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $Date_fin = null;
@@ -29,7 +29,7 @@ class AdvVoyage
     private ?string $Url_image = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $Résumé = null;
+    private ?string $Resume = null;
 
     #[ORM\Column]
     private ?int $Nombre_pers_min = null;
@@ -73,26 +73,26 @@ class AdvVoyage
         return $this->id;
     }
 
-    public function getDurée(): ?int
+    public function getDuree(): ?int
     {
-        return $this->Durée;
+        return $this->Duree;
     }
 
-    public function setDurée(int $Durée): static
+    public function setDuree(int $Duree): static
     {
-        $this->Durée = $Durée;
+        $this->Duree = $Duree;
 
         return $this;
     }
 
-    public function getDateDépart(): ?\DateTimeInterface
+    public function getDateDepart(): ?\DateTimeInterface
     {
-        return $this->Date_départ;
+        return $this->Date_depart;
     }
 
-    public function setDateDépart(\DateTimeInterface $Date_départ): static
+    public function setDateDepart(\DateTimeInterface $Date_depart): static
     {
-        $this->Date_départ = $Date_départ;
+        $this->Date_depart = $Date_depart;
 
         return $this;
     }
@@ -121,14 +121,14 @@ class AdvVoyage
         return $this;
     }
 
-    public function getRésumé(): ?string
+    public function getResume(): ?string
     {
-        return $this->Résumé;
+        return $this->Resume;
     }
 
-    public function setRésumé(string $Résumé): static
+    public function setRésumé(string $Resume): static
     {
-        $this->Résumé = $Résumé;
+        $this->Resume = $Resume;
 
         return $this;
     }

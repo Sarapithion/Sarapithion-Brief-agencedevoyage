@@ -25,11 +25,11 @@
         {% for adv_voyage in adv_voyages %}
             <tr>
                 <td>{{ adv_voyage.id }}</td>
-                <td class="example-wrapper">{{ adv_voyage.Durée }}</td>
-                <td>{{ adv_voyage.DateDépart ? adv_voyage.DateDépart|date('d-m-Y') : '' }}</td>
+                <td class="example-wrapper">{{ adv_voyage.Duree ? adv_voyage.Duree:''}}</td>
+                <td>{{ adv_voyage.DateDepart ? adv_voyage.DateDepart|date('d-m-Y') : '' }}</td>
                 <td>{{ adv_voyage.DateFin ? adv_voyage.DateFin|date('d-m-Y') : '' }}</td>
                 <td>{{ adv_voyage.UrlImage }}</td>
-                <td>{{ adv_voyage.Résumé }}</td>
+                <td>{{ adv_voyage.Resume }}</td>
                 <td>{{ adv_voyage.NombrePersMin }}</td>
                 <td>{{ adv_voyage.NombrePersMax }}</td>
                 <td>{{ adv_voyage.Prix }}</td>
