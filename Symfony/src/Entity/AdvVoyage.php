@@ -49,7 +49,7 @@ class AdvVoyage
     /**
      * @var Collection<int, AdvCategorie>
      */
-    #[ORM\ManyToMany(targetEntity: advCategorie::class, inversedBy: 'AdvVoyages')]
+    #[ORM\ManyToMany(targetEntity: AdvCategorie::class, inversedBy: 'AdvVoyages')]
     private Collection $advCategorie;
 
     #[ORM\ManyToOne]
@@ -230,7 +230,7 @@ class AdvVoyage
     }
 
     /**
-     * @return Collection<int, advReservation>
+     * @return Collection<int, AdvReservation>
      */
     public function getAdvReservation(): Collection
     {
